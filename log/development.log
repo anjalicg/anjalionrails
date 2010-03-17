@@ -1,0 +1,1231 @@
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-16 14:59:15) [GET]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-16 14:59:15) [GET]
+
+
+Mysql::Error (Access denied for user 'root'@'localhost' (using password: NO)):
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/mysql_adapter.rb:547:in `real_connect'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/mysql_adapter.rb:547:in `connect'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/mysql_adapter.rb:199:in `initialize'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/mysql_adapter.rb:74:in `new'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/mysql_adapter.rb:74:in `mysql_connection'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_specification.rb:121:in `retrieve_connection'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/connection_specification.rb:113:in `connection'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (26.6ms)
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (1.3ms)
+Rendering /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-16 15:00:39) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (17.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+
+
+ActionView::TemplateError (undefined local variable or method `_visit_browser' for #<ActionView::Base:0x7f6048f6f928>) on line #1 of app/views/main/index.erb:
+1: <%= _visit_browser %>
+2: <%= _visit_place %>
+
+    app/views/main/index.erb:1
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1251:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1257:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (26.3ms)
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-16 15:00:55) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+
+
+ActionView::TemplateError (undefined local variable or method `visit_browser' for #<ActionView::Base:0x7f60491ef9c8>) on line #1 of app/views/main/index.erb:
+1: <%= visit_browser %>
+2: <%= visit_place %>
+
+    app/views/main/index.erb:1
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1251:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1257:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (21.7ms)
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.7ms)
+Rendering /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-16 15:01:44) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.2ms)
+Rendered main/_visit_place (0.2ms)
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-16 15:02:06) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.1ms)
+Rendered main/_visit_place (0.2ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-16 15:04:57) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.2ms)
+Rendered main/_visit_place (0.2ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-16 15:05:00) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.2ms)
+Rendered main/_visit_place (0.2ms)
+Completed in 95ms (View: 4, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-16 15:05:05) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.2ms)
+Rendered main/_visit_place (0.2ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-16 15:05:16) [GET]
+  [4;36;1mSQL (2.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.2ms)
+Rendered main/_visit_place (0.2ms)
+Completed in 6ms (View: 4, DB: 3) | 200 OK [http://localhost/main]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (23.4ms)[0m   [0;1mCREATE DATABASE `anjalionrails_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:28:48) [GET]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+MissingSourceFile (no such file to load -- http):
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /app/controllers/main_controller.rb:18:in `find_location_main'
+    /app/controllers/main_controller.rb:4:in `index'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (20.6ms)
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (1.0ms)
+Rendering /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:29:04) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.3ms)
+Rendered main/_visit_place (0.3ms)
+Completed in 1890ms (View: 7, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:29:41) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.2ms)
+Rendered main/_visit_place (0.3ms)
+Completed in 992ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:29:46) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.2ms)
+Rendered main/_visit_place (0.3ms)
+Completed in 1448ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:36:12) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.2ms)
+Rendered main/_visit_place (0.3ms)
+Completed in 996ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:36:27) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.2ms)
+Rendered main/_visit_place (0.3ms)
+Completed in 1029ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:37:01) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+NoMethodError (undefined method `HTTP_USER_AGENT' for #<ActionController::CgiRequest:0x7f5eb2e04530>):
+    /vendor/rails/actionpack/lib/action_controller/cgi_process.rb:111:in `method_missing'
+    /app/controllers/main_controller.rb:5:in `index'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (25.4ms)
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (1.0ms)
+Rendering /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:38:11) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+NoMethodError (undefined method `HTTP_USER_AGENT' for #<ActionController::CgiRequest:0x7f5eb3114d88>):
+    /vendor/rails/actionpack/lib/action_controller/cgi_process.rb:111:in `method_missing'
+    /app/controllers/main_controller.rb:5:in `index'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (22.5ms)
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:38:15) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+NoMethodError (undefined method `HTTP_USER_AGENT' for #<ActionController::CgiRequest:0x7f5eb2f94080>):
+    /vendor/rails/actionpack/lib/action_controller/cgi_process.rb:111:in `method_missing'
+    /app/controllers/main_controller.rb:5:in `index'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (22.2ms)
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:38:28) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+NoMethodError (undefined method `http_user_agent' for #<ActionController::CgiRequest:0x7f5eb2e339e8>):
+    /vendor/rails/actionpack/lib/action_controller/cgi_process.rb:111:in `method_missing'
+    /app/controllers/main_controller.rb:5:in `index'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (26.4ms)
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:39:01) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.3ms)
+Rendered main/_visit_place (0.3ms)
+Completed in 1782ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:41:34) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.3ms)
+Rendered main/_visit_place (0.3ms)
+Completed in 992ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:42:06) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.2ms)
+Rendered main/_visit_place (0.3ms)
+Completed in 1712ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:42:37) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+TypeError (can't dump anonymous class Class):
+    /usr/lib/ruby/1.8/yaml/rubytypes.rb:6:in `to_yaml'
+    /usr/lib/ruby/1.8/yaml/rubytypes.rb:41:in `node_export'
+    /usr/lib/ruby/1.8/yaml/rubytypes.rb:41:in `add'
+    /usr/lib/ruby/1.8/yaml/rubytypes.rb:41:in `to_yaml'
+    /usr/lib/ruby/1.8/yaml/rubytypes.rb:40:in `each'
+    /usr/lib/ruby/1.8/yaml/rubytypes.rb:40:in `to_yaml'
+    /usr/lib/ruby/1.8/yaml/rubytypes.rb:39:in `map'
+    /usr/lib/ruby/1.8/yaml/rubytypes.rb:39:in `to_yaml'
+    /usr/lib/ruby/1.8/yaml.rb:391:in `call'
+    /usr/lib/ruby/1.8/yaml.rb:391:in `emit'
+    /usr/lib/ruby/1.8/yaml.rb:391:in `quick_emit'
+    /usr/lib/ruby/1.8/yaml/rubytypes.rb:38:in `to_yaml'
+    /usr/lib/ruby/1.8/yaml/rubytypes.rb:18:in `node_export'
+    /usr/lib/ruby/1.8/yaml/rubytypes.rb:18:in `add'
+    /usr/lib/ruby/1.8/yaml/rubytypes.rb:18:in `to_yaml'
+    /usr/lib/ruby/1.8/yaml/rubytypes.rb:17:in `each'
+    /usr/lib/ruby/1.8/yaml/rubytypes.rb:17:in `to_yaml'
+    /usr/lib/ruby/1.8/yaml/rubytypes.rb:16:in `map'
+    /usr/lib/ruby/1.8/yaml/rubytypes.rb:16:in `to_yaml'
+    /usr/lib/ruby/1.8/yaml.rb:391:in `call'
+    /usr/lib/ruby/1.8/yaml.rb:391:in `emit'
+    /usr/lib/ruby/1.8/yaml.rb:391:in `quick_emit'
+    /usr/lib/ruby/1.8/yaml/rubytypes.rb:15:in `to_yaml'
+    /app/controllers/main_controller.rb:7:in `index'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (25.3ms)
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:42:57) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.2ms)
+Rendered main/_visit_place (0.3ms)
+Completed in 1000ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-17 00:43:28) [GET]
+
+
+SyntaxError (/home/surg/anjalis_doc/railstest/anjalionrails/app/controllers/main_controller.rb:7: syntax error, unexpected '}'
+......#{request.path_parameters=}.................................
+                              ^
+/home/surg/anjalis_doc/railstest/anjalionrails/app/controllers/main_controller.rb:13: syntax error, unexpected tCONSTANT, expecting '}'
+@place= "Bangalore"
+                  ^
+/home/surg/anjalis_doc/railstest/anjalionrails/app/controllers/main_controller.rb:21: syntax error, unexpected tFLOAT, expecting '}'
+ip_add = "125.22.47.125"
+                ^
+/home/surg/anjalis_doc/railstest/anjalionrails/app/controllers/main_controller.rb:21: no .<digit> floating literal anymore; put 0 before dot
+ip_add = "125.22.47.125"
+                 ^
+/home/surg/anjalis_doc/railstest/anjalionrails/app/controllers/main_controller.rb:26: syntax error, unexpected tDOT3
+	puts ".......................... #{http.body}..." 
+	            ^
+/home/surg/anjalis_doc/railstest/anjalionrails/app/controllers/main_controller.rb:34: syntax error, unexpected kEND, expecting '}'
+/home/surg/anjalis_doc/railstest/anjalionrails/app/controllers/main_controller.rb:40: syntax error, unexpected kEND, expecting '}'
+end		
+   ^):
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:382:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:382:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:381:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:256:in `require_or_load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:427:in `load_missing_constant'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:77:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:89:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:352:in `constantize'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:351:in `each'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:351:in `constantize'
+    /vendor/rails/activesupport/lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:392:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (16.9ms)
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:43:34) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.2ms)
+Rendered main/_visit_place (0.3ms)
+Completed in 1013ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:43:54) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.3ms)
+Rendered main/_visit_place (0.2ms)
+Completed in 994ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:44:31) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.3ms)
+Rendered main/_visit_place (0.3ms)
+Completed in 996ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:44:50) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.2ms)
+Rendered main/_visit_place (0.3ms)
+Completed in 3042ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:45:12) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+NoMethodError (undefined method `content_type_with_parameters' for #<ActionController::CgiRequest:0x7f5eb2d7dc10>):
+    /vendor/rails/actionpack/lib/action_controller/cgi_process.rb:111:in `method_missing'
+    /app/controllers/main_controller.rb:7:in `index'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (109.8ms)
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:46:01) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.3ms)
+Rendered main/_visit_place (0.2ms)
+Completed in 991ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:46:31) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.3ms)
+Rendered main/_visit_place (0.3ms)
+Completed in 1083ms (View: 8, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:47:17) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.2ms)
+Rendered main/_visit_place (0.3ms)
+Completed in 1009ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:47:38) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.3ms)
+Rendered main/_visit_place (0.3ms)
+Completed in 1005ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:49:00) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.3ms)
+Rendered main/_visit_place (0.2ms)
+Completed in 1127ms (View: 7, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:49:16) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+LocalJumpError (no block given):
+    /app/controllers/main_controller.rb:8:in `tap'
+    /app/controllers/main_controller.rb:8:in `index'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (20.8ms)
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.7ms)
+Rendering /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:49:54) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.2ms)
+Rendered main/_visit_place (0.2ms)
+Completed in 1818ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:50:12) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+ArgumentError (wrong number of arguments (0 for 1)):
+    /app/controllers/main_controller.rb:8:in `require_association'
+    /app/controllers/main_controller.rb:8:in `index'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (21.3ms)
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (1.0ms)
+Rendering /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:50:24) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.2ms)
+Rendered main/_visit_place (0.2ms)
+Completed in 998ms (View: 5, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:50:39) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+ArgumentError (wrong number of arguments (0 for 1)):
+    /app/controllers/main_controller.rb:8:in `with_options'
+    /app/controllers/main_controller.rb:8:in `index'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:103:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:60:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (22.9ms)
+Rendered /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/surg/anjalis_doc/railstest/anjalionrails/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:51:00) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.3ms)
+Rendered main/_visit_place (0.3ms)
+Completed in 1055ms (View: 7, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:51:18) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.3ms)
+Rendered main/_visit_place (0.3ms)
+Completed in 1484ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:51:53) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.3ms)
+Rendered main/_visit_place (0.3ms)
+Completed in 995ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:52:19) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.3ms)
+Rendered main/_visit_place (0.3ms)
+Completed in 2367ms (View: 5, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:53:46) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.2ms)
+Rendered main/_visit_place (0.3ms)
+Completed in 1014ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:55:11) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.3ms)
+Rendered main/_visit_place (0.3ms)
+Completed in 1024ms (View: 7, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-03-17 00:55:29) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering main/index
+Rendered main/_visit_browser (0.2ms)
+Rendered main/_visit_place (0.3ms)
+Completed in 986ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
