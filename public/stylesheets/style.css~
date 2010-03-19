@@ -1,0 +1,61 @@
+/*ID uses # and class uses .*/
+/* The CSS for the sidebar */
+#sidebar{
+float:left;
+width : 20%;
+border : 5px solid #FCDDBD;
+background-color : #FCEDDC;
+#margin-right: 1px;
+}
+/* The CSS for the main content */
+#mcontent {
+padding : 2%;
+width: 50%;
+float:left;
+border : 5px solid #FCDDBD;
+margin-left: 1%;
+font-family: serif;
+}
+/* The CSS for the header, my experiments.. */
+#header {
+#margin-left:10%;
+margin-top:-1%;
+#margin-bottom: 1%;
+#width: 80%;
+text-align: center;
+font-family : monospace;
+color: #544D46;
+background-color : #9EA9B5;
+padding : 2%;
+border : 5px solid #FCDDBD;
+}
+/* The CSS for each item in sidebar */
+.side_item {
+border : 2px solid #FCDDBD;
+font-size: xx-large;
+font-family: Serif;
+padding:2%;
+color: yellow;
+margin-top: 1%;
+margin-bottom: 1%;
+}
+/* The CSS for the side bar link */
+.side_link {
+font-size: xx-large;
+color: #543A1E;
+}
+/* The CSS for each form of the match functions */
+.math {
+border : 2px solid #FCDDBD;
+margin-bottom : 5%;
+width:31%;
+float:left;
+margin-right:1%;
+}
+/* The CSS for the generic div in main body*/
+.gen_mcontent {
+border : 2px solid #FCDDBD;
+margin-bottom : 5%;
+width:	100%;
+float:left;
+}

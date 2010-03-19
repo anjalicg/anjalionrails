@@ -1,0 +1,137 @@
+<span style="margin:30%;margin-top:10%;"> <strong>From Decimal</strong>(max 20 digits)<br/> </span>
+<div class="math" >
+	<% form_tag :controller=>'mathfuncs', :action=>'dec2bin' do %>
+		<%= text_field :input, :decimal, :maximum=>30 %>
+		<span style="margin:30%;"><%= submit_tag "To Binary" %></span>
+		<% if @answer_dec2bin %>
+			<%= text_field :output, :binary, :value=>@answer_dec2bin %>
+		<% else%>
+			<%= text_field :output, :binary, :value=>'Binary value will be updated here'%>
+		<% end %>
+	<% end %>
+</div>
+<div class="math" >
+	<% form_tag :controller=>'mathfuncs', :action=>'dec2oct' do %>
+		<%= text_field :input, :decimal %>
+		<span style="margin:30%;"><%= submit_tag "To Octal" %></span>
+		<% if @answer_dec2oct %>
+			<%= text_field :output, :octal, :value=>@answer_dec2oct %>
+		<% else%>
+			<%= text_field :output, :octal, :value=>'Oct value will be updated here'%>
+		<% end %>
+	<% end %>
+</div>
+<div class="math" >
+	<% form_tag :controller=>'mathfuncs', :action=>'dec2hex' do %>
+		<%= text_field :input, :decimal %>
+		<span style="margin:30%;"><%= submit_tag "To Hex" %></span>
+		<% if @answer_dec2hex %>
+			<%= text_field :output, :hex, :value=>@answer_dec2hex %>
+		<% else%>
+			<%= text_field :output, :hex, :value=>'Hex value will be updated here'%>
+		<% end %>
+	<% end %>
+</div>
+
+<span style="margin:30%;margin-top:10%;"> <strong>From Hexadecimal</strong>(max 20 digits)<br/> </span>
+<div class="math" >
+	<% form_tag :controller=>'mathfuncs', :action=>'hex2bin' do %>
+		<%= text_field :input, :hexd, :maximum=>30 %>
+		<span style="margin:30%;"><%= submit_tag "To Binary" %></span>
+		<% if @answer_hex2bin %>
+			<%= text_field :output, :binary, :value=>@answer_hex2bin %>
+		<% else%>
+			<%= text_field :output, :binary, :value=>'Binary value will be updated here'%>
+		<% end %>
+	<% end %>
+</div>
+<div class="math" >
+	<% form_tag :controller=>'mathfuncs', :action=>'hex2oct' do %>
+		<%= text_field :input, :hexd %>
+		<span style="margin:30%;"><%= submit_tag "To Octal" %></span>
+		<% if @answer_hex2oct %>
+			<%= text_field :output, :octal, :value=>@answer_hex2oct %>
+		<% else%>
+			<%= text_field :output, :octal, :value=>'Oct value will be updated here'%>
+		<% end %>
+	<% end %>
+</div>
+<div class="math" >
+	<% form_tag :controller=>'mathfuncs', :action=>'hex2dec' do %>
+		<%= text_field :input, :hexd %>
+		<span style="margin:30%;"><%= submit_tag "To Decimal" %></span>
+		<% if @answer_hex2dec %>
+			<%= text_field :output, :decimal, :value=>@answer_hex2dec %>
+		<% else%>
+			<%= text_field :output, :decimal, :value=>'Decimal value will be updated here'%>
+		<% end %>
+	<% end %>
+</div>
+<span style="margin:30%;margin-top:10%;"> <strong>From Binary</strong>(max 20 digits)<br/> </span>
+<div class="math" >
+	<% form_tag :controller=>'mathfuncs', :action=>'bin2hex' do %>
+		<%= text_field :input, :binary, :maximum=>30 %>
+		<span style="margin:30%;"><%= submit_tag "To Hex" %></span>
+		<% if @answer_bin2hex %>
+			<%= text_field :output, :hexd, :value=>@answer_bin2hex %>
+		<% else%>
+			<%= text_field :output, :hexd, :value=>'Hexadecimal value will be updated here'%>
+		<% end %>
+	<% end %>
+</div>
+<div class="math" >
+	<% form_tag :controller=>'mathfuncs', :action=>'bin2oct' do %>
+		<%= text_field :input, :binary %>
+		<span style="margin:30%;"><%= submit_tag "To Octal" %></span>
+		<% if @answer_bin2oct %>
+			<%= text_field :output, :octal, :value=>@answer_bin2oct %>
+		<% else%>
+			<%= text_field :output, :octal, :value=>'Oct value will be updated here'%>
+		<% end %>
+	<% end %>
+</div>
+<div class="math" >
+	<% form_tag :controller=>'mathfuncs', :action=>'bin2dec' do %>
+		<%= text_field :input, :binary %>
+		<span style="margin:30%;"><%= submit_tag "To Decimal" %></span>
+		<% if @answer_bin2dec %>
+			<%= text_field :output, :decimal, :value=>@answer_bin2dec %>
+		<% else%>
+			<%= text_field :output, :decimal, :value=>'Decimal value will be updated here'%>
+		<% end %>
+	<% end %>
+</div>
+<span style="margin:30%;margin-top:10%;"> <strong>From Octal</strong>(max 20 digits)<br/> </span>
+<div class="math" >
+	<% form_tag :controller=>'mathfuncs', :action=>'oct2hex' do %>
+		<%= text_field :input, :oct, :maximum=>30 %>
+		<span style="margin:30%;"><%= submit_tag "To Hex" %></span>
+		<% if @answer_oct2hex %>
+			<%= text_field :output, :hexd, :value=>@answer_oct2hex %>
+		<% else%>
+			<%= text_field :output, :hexd, :value=>'Hexadecimal value will be updated here'%>
+		<% end %>
+	<% end %>
+</div>
+<div class="math" >
+	<% form_tag :controller=>'mathfuncs', :action=>'oct2bin' do %>
+		<%= text_field :input, :oct %>
+		<span style="margin:30%;"><%= submit_tag "To Binary" %></span>
+		<% if @answer_oct2bin %>
+			<%= text_field :output, :binary, :value=>@answer_oct2bin %>
+		<% else%>
+			<%= text_field :output, :binary, :value=>'Oct value will be updated here'%>
+		<% end %>
+	<% end %>
+</div>
+<div class="math" >
+	<% form_tag :controller=>'mathfuncs', :action=>'oct2dec' do %>
+		<%= text_field :input, :oct %>
+		<span style="margin:30%;"><%= submit_tag "To Decimal" %></span>
+		<% if @answer_oct2dec %>
+			<%= text_field :output, :decimal, :value=>@answer_oct2dec %>
+		<% else%>
+			<%= text_field :output, :decimal, :value=>'Decimal value will be updated here'%>
+		<% end %>
+	<% end %>
+</div>

@@ -1,0 +1,2 @@
+module WordgameHelper
+end

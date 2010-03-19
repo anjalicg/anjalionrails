@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;.
+charset=iso-8859-1" />
+<meta http-equiv="Content-Language" content="en-us" />
+<%= stylesheet_link_tag "style" %>
+<title> Anjali On Rails </title>
+</head>
+<body style="background-color:#FCF4EC;">
+<div id="header">
+<h1>My experiments with Rails...</h1>
+</div>
+<div id="sidebar">
+<p class="side_item"> <%= link_to "Home", {:controller=>'main', :action=>'index'},:class=> "side_link" %></p>
+<p class="side_item">  <%= link_to "Number Conversion", {:controller=>'mathfuncs', :action=>'index'},:class=> "side_link" %></p>
+<p class="side_item">  <%= link_to "Word Games", {:controller=>'mathfuncs', :action=>'index'},:class=> "side_link" %></p>
+<p class="side_item">  <%= link_to "Number Conversion", {:controller=>'mathfuncs', :action=>'index'},:class=> "side_link" %></p>
+<p class="side_item">  <%= link_to "Number Conversion", {:controller=>'mathfuncs', :action=>'index'},:class=> "side_link" %></p>
+<p class="side_item">  <%= link_to "Clear Session", {:controller=>'main', :action=>'clear'},:class=> "side_link" %></p>
+</div>
+<div id="mcontent">
+	<% if flash[:notice_layout] %>
+	      <div id="status"><%= flash[:notice_layout] %></div>
+	<% elsif flash[:error_layout] %>
+	      <div id="errors" style="color:red;font-size:small;text-align:center;"><%= flash[:error_layout] %></div>
+	<% end %>
+	<%= yield %>
+</div>
+
+</body>
+</html>
