@@ -1,4 +1,0 @@
-<% if @quote %>
-<%= @quote.quote %>
-<%= @quote.author %>
-<% end %>
