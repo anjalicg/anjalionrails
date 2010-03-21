@@ -35,7 +35,7 @@ border : 2px solid #FCDDBD;
 font-size: xx-large;
 font-family: Serif;
 padding:2%;
-color: yellow;
+#color: yellow;
 margin-top: 1%;
 margin-bottom: 1%;
 }
@@ -59,4 +59,16 @@ margin-bottom : 5%;
 margin-top : 5%;
 width:	100%;
 float:left;
+}
+.each_letter {
+border : 2px solid #FCDDBD;
+padding : 10px;
+margin : 1%;
+margin-top : 2%;
+font-family: monospace;
+}
+.word_jumble {
+border : 1px solid #FCDDBD;
+padding : 2%;
+margin : 1%;
 }
