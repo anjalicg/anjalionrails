@@ -2,13 +2,12 @@ class MainController < ApplicationController
 def index
 @quotation=Quotation.new
 q=Quotation.find(:all)
-l=rand((q.length) +1)
+l=rand(q.length)
 if q[l]
 @quote=q[l]
 end
-session["word_hangman"] = "Anjali"
-@word = session["word_hangman"]
 @visit_details=Hash.new()
+#Have to store the place info in session, otherwise it will get queried everytime the home page is accessed and it is a time-consuming operation.
 unless session["Your Place"]
 place=find_location_main(request.remote_addr)
 session["Your Place"] = place["city"] +","+ place["country"]
@@ -26,13 +25,14 @@ end
 
 def clear
 reset_session
+redirect_to :back
 end
 
 private
 def find_location_main(ip_add)
 require 'timeout'
 require 'net/http'
-ip_add = "122.167.31.3" #this works
+#ip_add = "122.167.31.3" #this works
 begin
 Timeout::timeout(5) {
 	http=Net::HTTP.post_form(URI.parse('http://api.hostip.info/get_html.php'), {'ip'=>ip_add})
