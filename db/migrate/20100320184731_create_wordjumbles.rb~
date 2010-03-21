@@ -1,0 +1,13 @@
+class CreateWordjumbles < ActiveRecord::Migration
+  def self.up
+    create_table :wordjumbles do |t|
+	t.column :word, :string
+	t.column :difficulty, :integer
+    end
+
+  end
+
+  def self.down
+    drop_table :wordjumbles
+  end
+end

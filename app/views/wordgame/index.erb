@@ -1,3 +1,39 @@
-Word jumble
-continuous quiz
-hangman
+<div class="word_jumble" >
+<span style="margin:30%;margin-top:10%;color: #543A1E;"> <strong>Word Jumble</strong><br/> </span>
+<p style="font-size:15px;color: #543A1E;"> This is a very simple word jumble game. You will see a jumbled up word. You have to guess the correct word and type your answer in the "Answer" field and click Submit. And we will tell you if the answer is correct or not. </p>
+<% form_tag :controller=>'wordgame', :action=>'wordjumble' do %>
+	<% if @wordjumble %>
+		<% @wordjumble.each_char do |char| %>
+			<span class="each_letter"><%= char.capitalize %></span>
+		<% end %>
+		<%= text_field :wordgame, :jumble_ans, :size=>@wordjumble.length %>
+		<%= submit_tag "Submit Answer" %> 
+	<% end %>
+<% end %>
+<br/>
+<p><span class="each_letter"> <%= link_to "New Word" , :controller=>'wordgame', :action=>'new_game' %> </span></p>
+</div>
+
+<div class="word_jumble" >
+<span style="margin:30%;margin-top:10%;color: #543A1E;"> <strong>Fun Vocab</strong><br/> </span>
+<p style="font-size:15px;color: #543A1E;"> This is a fun vocabulary test. For the given word, click on the buttom which is its correct synonym. </p>
+<span class= "vocab_word" style="color: #543A1E;"><strong><%= @vocab.word %></strong> means:</span>
+<ul>
+<li> <% form_tag :controller=>'wordgame', :action=>'vocab', :ans=>1, :ques=>@vocab.word do %> 
+<span style="margin-left:-5%;"><%= submit_tag @vocab.opt1 %></span>
+<% end %>
+</li>
+<li> <% form_tag :controller=>'wordgame', :action=>'vocab', :ans=>2, :ques=>@vocab.word do %> 
+<span style="margin-left:-5%;"><%= submit_tag @vocab.opt2 %></span>
+<% end %>
+</li>
+<li> <% form_tag :controller=>'wordgame', :action=>'vocab', :ans=>3, :ques=>@vocab.word do %> 
+<span style="margin-left:-5%;"><%= submit_tag @vocab.opt3 %></span>
+<% end %>
+</li>
+<li> <% form_tag :controller=>'wordgame', :action=>'vocab', :ans=>4, :ques=>@vocab.word do %> 
+<span style="margin-left:-5%;"><%= submit_tag @vocab.opt4 %></span>
+<% end %>
+</li>
+</ul>
+</div>
