@@ -9,12 +9,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100317192449) do
+ActiveRecord::Schema.define(:version => 20100320184758) do
+
+  create_table "hangmen", :force => true do |t|
+    t.string "word"
+    t.string "category"
+  end
 
   create_table "quotations", :force => true do |t|
     t.text     "quote",      :null => false
     t.string   "author"
     t.datetime "created_at"
+  end
+
+  create_table "vocabs", :force => true do |t|
+    t.string  "word"
+    t.string  "opt1"
+    t.string  "opt2"
+    t.string  "opt3"
+    t.string  "opt4"
+    t.integer "ans"
+    t.integer "attempt", :default => 0
+    t.integer "correct", :default => 0
+  end
+
+  create_table "wordjumbles", :force => true do |t|
+    t.string  "word"
+    t.integer "difficulty"
   end
 
 end
