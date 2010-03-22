@@ -1,6 +1,5 @@
 class WordgameController < ApplicationController
 def index
-#Will try to implement this using hidden field instead of sessions
 unless session[:wordjumble]
 	q=Wordjumble.find(:all)
 	l=rand(q.length)
@@ -17,26 +16,55 @@ if vocab[vl]
 end #End of if for Vocabulary game
 
 end
+
+def hangman
+@cat_list = Hangman.find(:all, :select=>"category").map {|cat| cat.category}.uniq
+case request.method
+when :post
+	puts "Post of hangman"
+	@category=params[:category]
+	@all_blanks=false
+puts "............... Hangman submission #{params} ..........."
+when :get
+case params[:category]
+when "Countries" 
+	q=Hangman.find(:all, :conditions=>{:category=>"Countries"})
+	@category = "Countries"
+	puts "Country session word #{session[:hangman]}"
+when "Agatha Christie Novels"
+	q=Hangman.find(:all, :conditions=>{:category=>"Agatha Christie Novels"})
+	@category = "Agatha Christie Novels"
+	puts "Agatha Christie Novels session word #{session[:hangman]}"
+when default
+puts "Something else"
+end #End of category
+
+l=rand(q.length)
+if q[l]
+	session[:hangman]=q[l].word
+	@all_blanks=true
+end #End if 
+end #End of request.method
+end
+
 def vocab
 vocab = Vocab.find(:all)
 vl=rand(vocab.length)
 if vocab[vl]
 	@vocab=vocab[vl]
-end #End of if for Vocabulary game
-#puts params
+end #End of if 
 case request.method
 when :post
-puts "Inside post........"
-puts params
-puts "Inside post.........."
 w=Vocab.find_by_word(params[:ques])
-puts w.word
-if w.ans.to_i == params[:ans].to_i
-flash[:notice_layout] = "Congrats!! Your guess was correct"
+if w.ans == params[:ans]
+flash[:notice_vocab] = "Congrats!! <strong> #{w.word} = #{w.ans} </strong>"
+w.attempt +=1
+w.correct +=1
+w.save
 else
-str="opt"+w.ans.to_s
-correct=w.eval(str)
-flash[:error_layout] = "Sorry!! That was an incorrect guess. #{w.word} means "
+flash[:error_vocab] = "<strong> #{w.word} = #{w.ans} </strong>"
+w.attempt +=1
+w.save
 end
 redirect_to :controller=>'wordgame', :action=>'index'
 end #End of case
