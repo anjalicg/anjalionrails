@@ -16,22 +16,27 @@
 
 <div class="word_jumble" >
 <span style="margin:30%;margin-top:10%;color: #543A1E;"> <strong>Fun Vocab</strong><br/> </span>
-<p style="font-size:15px;color: #543A1E;"> This is a fun vocabulary test. For the given word, click on the buttom which is its correct synonym. </p>
+<% if flash[:notice_vocab] %>
+      <div id="status"><%= flash[:notice_vocab] %></div>
+<% elsif flash[:error_vocab] %>
+      <div id="errors" style="color:red;font-size:small;text-align:center;"><%= flash[:error_vocab] %></div>
+<% end %>
+<p style="font-size:15px;color: #543A1E;"> This is a fun vocabulary test. For the given word, click on the button which is its correct synonym. </p>
 <span class= "vocab_word" style="color: #543A1E;"><strong><%= @vocab.word %></strong> means:</span>
 <ul>
-<li> <% form_tag :controller=>'wordgame', :action=>'vocab', :ans=>1, :ques=>@vocab.word do %> 
+<li> <% form_tag :controller=>'wordgame', :action=>'vocab', :ans=>@vocab.opt1, :ques=>@vocab.word do %> 
 <span style="margin-left:-5%;"><%= submit_tag @vocab.opt1 %></span>
 <% end %>
 </li>
-<li> <% form_tag :controller=>'wordgame', :action=>'vocab', :ans=>2, :ques=>@vocab.word do %> 
+<li> <% form_tag :controller=>'wordgame', :action=>'vocab', :ans=>@vocab.opt2, :ques=>@vocab.word do %> 
 <span style="margin-left:-5%;"><%= submit_tag @vocab.opt2 %></span>
 <% end %>
 </li>
-<li> <% form_tag :controller=>'wordgame', :action=>'vocab', :ans=>3, :ques=>@vocab.word do %> 
+<li> <% form_tag :controller=>'wordgame', :action=>'vocab', :ans=>@vocab.opt3, :ques=>@vocab.word do %> 
 <span style="margin-left:-5%;"><%= submit_tag @vocab.opt3 %></span>
 <% end %>
 </li>
-<li> <% form_tag :controller=>'wordgame', :action=>'vocab', :ans=>4, :ques=>@vocab.word do %> 
+<li> <% form_tag :controller=>'wordgame', :action=>'vocab', :ans=>@vocab.opt4, :ques=>@vocab.word do %> 
 <span style="margin-left:-5%;"><%= submit_tag @vocab.opt4 %></span>
 <% end %>
 </li>
