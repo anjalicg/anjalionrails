@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100320184758) do
+ActiveRecord::Schema.define(:version => 20100321082803) do
 
   create_table "hangmen", :force => true do |t|
     t.string "word"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(:version => 20100320184758) do
     t.string  "opt2"
     t.string  "opt3"
     t.string  "opt4"
-    t.integer "ans"
+    t.string  "ans"
     t.integer "attempt", :default => 0
     t.integer "correct", :default => 0
   end
