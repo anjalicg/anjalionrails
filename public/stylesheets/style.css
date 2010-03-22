@@ -72,3 +72,11 @@ border : 1px solid #FCDDBD;
 padding : 2%;
 margin : 1%;
 }
+.word_of_day{
+border : 2px solid #FCDDBD;
+margin-bottom : 5%;
+margin-right:2%;
+font-family: monospace;
+width:	40%;
+float:left;
+}
