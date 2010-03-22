@@ -1,0 +1,27 @@
+<% if @cat_list %>
+<h3>Select your favourite category:-</h3>
+<% @cat_list.each do |category| %>
+<p><%= link_to category.capitalize , :controller=>'wordgame', :action=>'hangman', :category=>category %></p>
+<% end %>
+<% end %>
+
+<% if session[:hangman] %>
+	<% form_tag :controller=>'wordgame' , :action=>'hangman', :category=>@category do %>
+		<em><strong>Category Selected :</strong> <%= @category.capitalize %><br/></em>
+		<% count = 0 %>
+		<% session[:hangman].each_char do |char| %>
+			<% if char != " " %>
+				<% if @all_blanks == true %>
+					<%= text_field :hangman, "guess#{count}", :size=>1 %>
+				<% else %>
+					V
+				<% end %>
+			<% else %>
+			 -
+			<% end %>
+			<% count +=1 %>
+		<% end %>
+		<br/><%= submit_tag "Check" %>
+	<%# End of form tag %>
+	<% end %>
+<% end %>
