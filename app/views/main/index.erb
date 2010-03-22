@@ -6,9 +6,19 @@
 </tr>
 <% end %>
 </table>
+
+
+
+
 <div class="gen_mcontent" >
 <em><%= render :partial =>"quotation/show" %></em>
 <%= render :partial =>"quotation/new", :object=>@quotation %>
 </div>
 
-
+<% if @word_of_day !=nil %>
+<div class="word_of_day" >
+<small>This information has been scraped from <strong><a href="http://www.merriam-webster.com/" target="_blank">merriam-webster</a></strong></small><br/>
+<span style="font-family:tahoma;font-size:large;"><strong><%= @word_of_day["word"]%>:</strong> <%= @word_of_day["meaning"]%></span><br/>
+<small><a href="http://www.merriam-webster.com/cgi-bin/mwwod.pl" target="_blank" >Click here to visit merriam-webster more details </a></small>
+</div>
+<% end %>
