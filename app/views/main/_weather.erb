@@ -1,0 +1,8 @@
+<% if @weather %>
+<small style="font-size:x-small;">This information has been obtained using the <strong>Google Weather API</strong> </small><br/>
+<small>
+<%= image_tag ("http://www.google.com/#{@weather['icon']}") %><%= @weather["condition"]%><br/>
+<%= @weather["humidity"] %> <br/> <%= @weather["wind_condition"] %> <br/>
+Temperature: <%= @weather["temp_f"]%> F / <%= @weather["temp_c"]%> C <br/>
+<small>
+<% end %>
