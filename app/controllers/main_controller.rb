@@ -1,4 +1,6 @@
 class MainController < ApplicationController
+require 'rexml/document'
+include REXML
 def index
 	@quotation=Quotation.new
 	q=Quotation.find(:all)
@@ -20,7 +22,12 @@ def index
 	@visit_details["Your IP"]= session["Your IP"]
 	@visit_details["Supported Charset"]= session["Supported Charset"]
 	@word_of_day = scrap_word()
-
+	begin
+	@weather = get_weather(session["Your Place"].split(",")[0])
+	#@weather = get_weather("moscow")
+	rescue Exception => err
+	puts "Error happened in getting the weather information for place ->#{session['Your Place'].split(',')[0]}<-!! \n <----------------Weather Exception Start \n #{err} \n Weather Exception End---------------->"
+	end
 
 end
 
@@ -30,6 +37,41 @@ redirect_to :back
 end
 
 private
+
+def get_weather (place)
+require 'net/http'
+require 'rexml/document' 
+require 'uri'
+#puts ".......................................Place is #{place} ......................................."
+begin
+Timeout::timeout(5) {
+http = Net::HTTP.new('www.google.com')
+resp,data=http.get2("/ig/api?weather=#{place}",{'User-Agent'=>'ruby/net::http' , 'Connection'=> 'keep-alive'})
+#puts resp
+#puts data
+xmlstr= REXML::Document.new data
+weather = Hash.new(0)
+found = false
+XPath.each(xmlstr, "//current_conditions") { |e|
+e.elements.each {|p|
+weather[p.name] = p.attributes["data"]
+found  = true
+} # End of each element
+} # End of XPath loop
+
+if found
+return weather
+else 
+return nil
+end
+} #End of timeout
+rescue Timeout::Error
+#puts "Weather api timed out............"
+return nil
+end
+
+end
+
 def scrap_word()
 require 'net/http'
 require 'strscan'
@@ -46,7 +88,8 @@ begin
 			type=str.scan_until(/</).chomp("<")
 			str.skip_until(/"sense_marker"/)
 			str.skip_until(/<\/span>/)
-			meaning=str.scan_until(/<strong>/).chomp("<strong>")
+			meaning=str.scan_until(/<\/dd>/)
+			#puts meaning
 			result["word"]=word
 			result["type"]=type
 			result["meaning"]=meaning
@@ -57,7 +100,7 @@ begin
 		}
 	}
 rescue Timeout::Error
-	puts "Geting word of the day timed out................................."
+	#puts "Geting word of the day timed out................................."
 	return nil
 end
 end
@@ -65,23 +108,23 @@ end
 def find_location_main(ip_add)
 require 'timeout'
 require 'net/http'
-#ip_add = "122.167.31.3" #this works
+ip_add = "122.167.31.3" #this works
 begin
 Timeout::timeout(5) {
 	http=Net::HTTP.post_form(URI.parse('http://api.hostip.info/get_html.php'), {'ip'=>ip_add})
 	if http
-	puts ".......................... #{http.body}..." 
+	#puts ".......................... #{http.body}..." 
 	location=Hash.new()
 	country_str=http.body.split("\n")[0].split(":")[1].split("(")[0].strip
 	city_str=http.body.split("\n")[1].split(":")[1].split(",")[0].strip
 	location["country"]=country_str
 	location["city"]=city_str
-	puts location
+	#puts location
 	return location
 	end
 }
 rescue Timeout::Error
-puts "Resolving location from ip timed out................................."
+#puts "Resolving location from ip timed out................................."
 location={"country"=>"timed out", "city"=>"timed out"}
 return location
 end		
