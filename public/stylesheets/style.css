@@ -80,3 +80,9 @@ font-family: monospace;
 width:	40%;
 float:left;
 }
+#rightbar {
+float:right;
+width : 20%;
+border : 5px solid #FCDDBD;
+background-color : #FCEDDC;
+}
