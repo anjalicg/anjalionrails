@@ -4,10 +4,10 @@ unless session[:wordjumble]
 	q=Wordjumble.find(:all)
 	l=rand(q.length)
 	if q[l]
-		session[:wordjumble]=jumbles(q[l].word)
+		session[:wordjumble]=q[l].word
 	end #End if 
 end #End unless
-@wordjumble = session[:wordjumble]
+@wordjumble = jumbles(session[:wordjumble])
 
 vocab = Vocab.find(:all)
 vl=rand(vocab.length)
@@ -73,10 +73,15 @@ end
 def wordjumble
 case request.method
 when :post
-if session[:wordjumble].word.upcase == params[:wordgame][:jumble_ans].upcase
+#puts "Inside word jumble post"
+if session[:wordjumble].upcase == params[:wordgame][:jumble_ans].upcase
+#puts "session word is equal"
+#puts session[:wordjumble] , params[:wordgame][:jumble_ans]
 flash[:notice_layout] = "Congrats!! Your guess was correct"
 redirect_to :controller=>'wordgame', :action=>'new_game'
 else 
+#puts "session word is NOT equal"
+#puts session[:wordjumble] , params[:wordgame][:jumble_ans]
 flash[:error_layout] = "Sorry!! That was an incorrect guess. Please try again."
 redirect_to :controller=>'wordgame', :action=>'index'
 end #If end
