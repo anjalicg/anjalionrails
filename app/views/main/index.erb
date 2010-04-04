@@ -5,6 +5,11 @@
 <td><%= value %></td>
 </tr>
 <% end %>
+<% if @weather  != nil %>
+<tr><td><strong>Weather Forecast:</strong></td>
+<td><%= render :partial => "main/weather", :object => @weather %></td>
+</tr>
+<% end %>
 </table>
 
 
@@ -19,6 +24,6 @@
 <div class="word_of_day" >
 <small>This information has been scraped from <strong><a href="http://www.merriam-webster.com/" target="_blank">merriam-webster</a></strong></small><br/>
 <span style="font-family:tahoma;font-size:large;"><strong><%= @word_of_day["word"]%>:</strong> <%= @word_of_day["meaning"]%></span><br/>
-<small><a href="http://www.merriam-webster.com/cgi-bin/mwwod.pl" target="_blank" >Click here to visit merriam-webster more details </a></small>
+<small><a href="http://www.merriam-webster.com/cgi-bin/mwwod.pl" target="_blank" >Click here to visit merriam-webster for more details </a></small>
 </div>
 <% end %>
