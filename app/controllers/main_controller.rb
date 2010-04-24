@@ -1,4 +1,5 @@
 class MainController < ApplicationController
+before_filter :logged_in?, :only=>'admin'
 require 'rexml/document'
 include REXML
 def index
@@ -39,6 +40,25 @@ end
 def about_site
 end
 def about_me
+end
+def login
+if session[:user]=="admin"
+render :controller=>'main', :action=>'admin'
+end
+case request.method
+when :post
+if params[:login][:user]=="anjaliIsDAdmin.com" and params[:login][:password] == "A1!A1!B2@C3#E5%H8*MU"
+session[:user]="admin"
+redirect_to :controller=>"main", :action=>"admin"
+end
+end
+
+end
+def admin
+end
+def logout
+reset_session
+redirect_to :controller=>'main', :action=>'index'
 end
 
 private
@@ -133,5 +153,12 @@ rescue Timeout::Error
 location={"country"=>"timed out", "city"=>"timed out"}
 return location
 end		
+end
+def logged_in?
+unless session[:user]
+flash[:error_layout]="You should be logged in to perform the requested action"
+else
+return true
+end
 end
 end
