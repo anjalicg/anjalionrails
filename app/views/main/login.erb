@@ -1,0 +1,16 @@
+<h3>Adminitstrator login:</h3>
+<% form_tag  :controller=>'main', :action=>"login" do %>
+<table border="1" cellspacing=1>
+<tr>
+<td>Login Id:</td>
+<td><%= text_field :login, :user %></td>
+</tr>
+<tr>
+<td>Password:</td>
+<td><%= password_field :login, :password %></td>
+</tr>
+<tr>
+<td><%= submit_tag "Login"%></td>
+</tr>
+</table>
+<% end %>
