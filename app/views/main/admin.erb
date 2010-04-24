@@ -1,0 +1,13 @@
+<% if session[:user] %>
+<%= link_to "logout", {:controller=>'main', :action=>'logout'} %>
+<% form_tag  :controller=>'quotation', :action=>"new" do %>
+Quotation : <%= text_area :quotation, :quote, :columns=>10, :rows=>1 %><br/>
+Author : <%= text_field :quotation, :author %>
+<%= submit_tag "Save" %>
+<% end %>
+
+
+
+# Generate list of all models-> option for edit and delete.
+
+<% end %>
