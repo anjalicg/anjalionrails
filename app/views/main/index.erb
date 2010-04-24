@@ -1,3 +1,4 @@
+<h4>Visitor Details:-</h4>
 <table border="1" cellspacing=1>
 <% @visit_details.each do |key, value| %>
 <tr>
@@ -16,14 +17,16 @@
 
 
 <div class="gen_mcontent" >
+<small><strong>Famous Thoughts</strong></small><br/>
 <em><%= render :partial =>"quotation/show" %></em>
 <%# render :partial =>"quotation/new", :object=>@quotation %>
 </div>
 
 <% if @word_of_day !=nil %>
 <div class="word_of_day" >
-<small>This information has been scraped from <strong><a href="http://www.merriam-webster.com/" target="_blank">merriam-webster</a></strong></small><br/>
+<u><strong><a href= "http://www.merriam-webster.com/" target="_blank">Merriam-Webster</a> word of the day</strong></u><br/>
 <span style="font-family:tahoma;font-size:large;"><strong><%= @word_of_day["word"]%>:</strong> <%= @word_of_day["meaning"]%></span><br/>
-<small><a href="http://www.merriam-webster.com/cgi-bin/mwwod.pl" target="_blank" >Click here to visit merriam-webster for more details </a></small>
+<small><a href="http://www.merriam-webster.com/cgi-bin/mwwod.pl" target="_blank" >Click here to visit merriam-webster for more details </a></small><br/>
+<small>This information has been scraped from <strong><a href="http://www.merriam-webster.com/" target="_blank">merriam-webster</a></strong></small>
 </div>
 <% end %>

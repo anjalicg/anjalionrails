@@ -6,11 +6,14 @@
 charset=iso-8859-1" />
 <meta http-equiv="Content-Language" content="en-us" />
 <%= stylesheet_link_tag "style" %>
-<title> Anjali On Rails </title>
+<title> CGA </title>
 </head>
 <body style="background-color:#FCF4EC;">
 <div id="header">
 <h1>My experiments with Rails... </h1>
+<p><%= link_to "About site", {:controller=>'main', :action=>'about_site'} %>
+<%= link_to "About me", {:controller=>'main', :action=>'about_me'} %>
+</p>
 </div>
 <div id="sidebar">
 <p class="side_item"> <%= link_to "Home", {:controller=>'main', :action=>'index'},:class=> "side_link" %></p>

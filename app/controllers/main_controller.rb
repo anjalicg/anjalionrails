@@ -24,6 +24,7 @@ def index
 	@word_of_day = scrap_word()
 	begin
 	@weather = get_weather(session["Your Place"].split(",")[0])
+	puts "Weather info obtained......... #{@weather}"
 	#@weather = get_weather("moscow")
 	rescue Exception => err
 	puts "Error happened in getting the weather information for place ->#{session['Your Place'].split(',')[0]}<-!! \n <----------------Weather Exception Start \n #{err} \n Weather Exception End---------------->"
@@ -34,6 +35,10 @@ end
 def clear
 reset_session
 redirect_to :back
+end
+def about_site
+end
+def about_me
 end
 
 private
@@ -108,7 +113,7 @@ end
 def find_location_main(ip_add)
 require 'timeout'
 require 'net/http'
-ip_add = "122.167.31.3" #this works
+#ip_add = "122.167.31.3" #this works
 begin
 Timeout::timeout(5) {
 	http=Net::HTTP.post_form(URI.parse('http://api.hostip.info/get_html.php'), {'ip'=>ip_add})

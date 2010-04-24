@@ -21,7 +21,7 @@
 <% elsif flash[:error_vocab] %>
       <div id="errors" style="color:red;font-size:small;text-align:center;"><%= flash[:error_vocab] %></div>
 <% end %>
-<p style="font-size:15px;color: #543A1E;"> This is a fun vocabulary test. For the given word, click on the button which is its correct synonym. </p>
+<p style="font-size:15px;color: #543A1E;"> This is a small vocabulary quiz. For the word given in bold letters, click on the button which is its correct synonym. </p>
 <span class= "vocab_word" style="color: #543A1E;"><strong><%= @vocab.word %></strong> means:</span>
 <ul>
 <li> <% form_tag :controller=>'wordgame', :action=>'vocab', :ans=>@vocab.opt1, :ques=>@vocab.word do %> 
