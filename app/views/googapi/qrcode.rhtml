@@ -15,8 +15,9 @@ Select Size: <%= select(:qr, :size, ["100x100","300x300", "400x400","500x500", ]
 <%= submit_tag "Generate QR Code:-" %>
 <% end %>
 <% if @qr_file %>
+<%= RAILS_ROOT%>
 <h5>QR Code for "<%= @inp_str_qrcode %>" </h5>
-<%= image_tag "/tmp/#{@qr_file}" %>
+<%= image_tag "#{RAILS_ROOT}/tmp/#{@qr_file}" %>
 <p>You can download this image and use it any blog or website of your own for non-commercial purposes.</p>
 <% end %>
 </div>
