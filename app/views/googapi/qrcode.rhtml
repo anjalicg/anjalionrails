@@ -16,10 +16,8 @@ Select Size: <%= select(:qr, :size, ["100x100","300x300", "400x400","500x500", ]
 <% end %>
 <% if @qr_file %>
 <h5>QR Code for "<%= @inp_str_qrcode %>" </h5>
-<%= image_tag "../qrcode/#{@qr_file}" %>
-<p>Copy paste the below link to your blogs/websites to display this QR code <br/>
-<div style="font-size:small;"><em><%= "http://cold-earth-66.heroku.com/qrcode/#{@qr_file}" %></em></div>
-</p>
+<%= image_tag "/tmp/#{@qr_file}" %>
+<p>You can download this image and use it any blog or website of your own for non-commercial purposes.</p>
 <% end %>
 </div>
 
