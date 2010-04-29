@@ -54,7 +54,8 @@ pageTracker._trackPageview();
 var dateTime = new Date();
 document.write("<span style='font-size:large;'>"+ "<b>Time:</b> <br/ >"+ dateTime.getDate()+"/"+ dateTime.getMonth()+"/"+ dateTime.getFullYear()+" "+ dateTime.getHours()+":"+ dateTime.getMinutes()+":"+dateTime.getSeconds() +"</span>")
 </script></p>
-<p class="side_item">  <%= link_to "Generate QR Code", {:controller=>'googapi',:action=>'qrcode'},:class=> "side_link" %></p>
+<p class="side_item">  <%# link_to "Generate QR Code", {:controller=>'googapi',:action=>'qrcode'},:class=> "side_link" %></p>
+<p class="side_item">  <%= link_to "Clear Session", {:controller=>'main', :action=>'clear'},:class=> "side_link" %></p>
 <p class="side_item">  <%= link_to "Clear Session", {:controller=>'main', :action=>'clear'},:class=> "side_link" %></p>
 <p class="side_item">  <%= link_to "Clear Session", {:controller=>'main', :action=>'clear'},:class=> "side_link" %></p>
 <p class="side_item">  <%= link_to "Clear Session", {:controller=>'main', :action=>'clear'},:class=> "side_link" %></p>
