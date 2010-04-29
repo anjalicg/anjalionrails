@@ -16,6 +16,14 @@ border : 5px solid #FCDDBD;
 margin-left: 1%;
 font-family: serif;
 }
+.googapi {
+padding : 2%;
+width: 50%;
+float:left;
+border : 2px solid #FCDDBD;
+margin-left: 1%;
+font-family: serif;
+}
 /* The CSS for the header, my experiments.. */
 #header {
 #margin-left:10%;

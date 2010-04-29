@@ -1,0 +1,26 @@
+<div class="googapi">
+<small>
+<p>QR stands for "Quick Response", since it is expected that this code can be decoded very quickly. <b>QR code</b> is a 2-dimensional bar code created by Japanese corporation Denso-Wave. QR code uses <a href= "http://en.wikipedia.org/wiki/Reed–Solomon_error_correction" > Reed-Solomon error correction</a>. <h5>Data capacity of QR code:- </h5> <ol>
+<li>Numeric Only:- Max 7,089 characters</li>
+<li>Alphanumeric:- Max 4,296 characters</li>
+<li>Binary(8 bits):- Max 2,953 bytes</li>
+<li>Kanji/Kana:- Max 1,817 characters</li>
+</ol>
+<span style="color:red;">Note:- I am using the <b>Google chart API</b> to generate the QR code here.For the time being, it supports only url and plain-text encoding. </span>
+</p>
+</small>
+<% form_tag :controller=>'Googapi', :action=>'qrcode' do %>
+Enter text or url: <%= text_field :qr, :textc %>
+Select Size: <%= select(:qr, :size, ["100x100","300x300", "400x400","500x500", ]) %>
+<%= submit_tag "Generate QR Code:-" %>
+<% end %>
+<% if @qr_file %>
+<h5>QR Code for "<%= @inp_str_qrcode %>" </h5>
+<%= image_tag "../qrcode/#{@qr_file}" %>
+<p>Copy paste the below link to your blogs/websites to display this QR code <br/>
+<div style="font-size:small;"><em><%= "http://cold-earth-66.heroku.com/qrcode/#{@qr_file}" %></em></div>
+</p>
+<% end %>
+</div>
+
+
