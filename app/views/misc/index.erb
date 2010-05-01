@@ -9,7 +9,9 @@
 <% if @unix2human %>
 <small><em>Unix Timestamp: </em></small> <%= text_field :misc, :unixT, :value=>@unixT %><br/>
 <small><em>Date and Time:</em></small> <%= text_field :misc, :currDnT, :value=>@unix2human %> <b>GMT <%=@zone%> </b><br/>
-<p style="font-size:small;text-align:center;">Unix epoch time <b><%= @unixT %>= <%=@unix2human%> GMT <%=@zone%> </b><br/></p>
+<p style="font-size:small;text-align:center;">Unix epoch time <b><%= @unixT %>= <%=@unix2human%> GMT <%=@zone%> </b><br/>
+Unix epoch time <b><%= @unixT %>= <%=@gmt_time%> GMT </b>
+</p>
 <% else %>
 <small><em>Unix Timestamp: </em></small> <%= text_field :misc, :unixT, :value=>Time.new.to_i %><br/>
 <small><em>Date and Time:</em></small> <%= text_field :misc, :currDnT %> <b>GMT</b>
@@ -30,7 +32,10 @@
 <small><em>Unix Timestamp:</em> </small><%= text_field :misc, :unixT2, :value=>@human2unix%>
 <p style="font-size:small;text-align:center;"> Time <b><%= @humanT %> GMT = <%=@human2unix%> </b> unix timestamp since epoch<br/></p>
 <% else %>
-<small><em>Date and Time: </em> </small> <%= text_field :misc, :currDnT2, :value=>Time.new.strftime("%m-%d-%Y %H:%M:%S")  %><b>GMT</b> <br/>
+<% t= Time.new %>
+<% off = t.gmt_offset %>
+<% gmt_time = t-off %>
+<small><em>Date and Time: </em> </small> <%= text_field :misc, :currDnT2, :value=>gmt_time.strftime("%m-%d-%Y %H:%M:%S")  %><b>GMT</b> <br/>
 <small><em>Unix Timestamp:</em> </small><%= text_field :misc, :unixT2 %>
 <% end %>
 <%= submit_tag "To Unix Timestamp" %>

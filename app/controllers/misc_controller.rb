@@ -6,6 +6,8 @@ when :post
 	when "unix2human"
 	puts "Inside timestamp...unix2human #{params[:misc][:unixT]}"
 	t=Time.new
+	diff=t.gmt_offset
+	@gmt_time = Time.at(params[:misc][:unixT].to_i - diff).strftime("%m-%d-%Y %H:%M:%S")
 	@zone=t.to_s.split(" ")[4]
 	@unix2human = Time.at(params[:misc][:unixT].to_i).strftime("%m-%d-%Y %H:%M:%S")
 	@unixT = params[:misc][:unixT]
