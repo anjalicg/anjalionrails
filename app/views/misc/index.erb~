@@ -1,0 +1,36 @@
+<div class="misc_block">
+<% if flash[:notice_unix2human] %>
+	      <div id="status"><%= flash[:notice_layout] %></div>
+	<% elsif flash[:error_unix2human] %>
+	      <div id="errors" style="color:red;font-size:small;text-align:center;"><%= flash[:error_layout] %></div>
+	<% end %>
+<h4>Convert from Unix Timestamp to Date and Time format</h4>
+<% form_tag :controller=>'misc', :action=>'index', :subaction=>'unix2human' do %>
+<% if @unix2human %>
+<small><strong>Unix Timestamp: </strong></small> <%= text_field :misc, :unixT, :value=>@unixT %><br/>
+<small><strong>Date and Time:</strong></small> <%= text_field :misc, :currDnT, :value=>@unix2human %>
+<% else %>
+<small><strong>Unix Timestamp: </strong></small> <%= text_field :misc, :unixT, :value=>Time.new.to_i %><br/>
+<small><strong>Date and Time:</strong></small> <%= text_field :misc, :currDnT %>
+<% end %>
+<%= submit_tag "To Date and Time" %>
+<% end %>
+</div>
+<div class="misc_block">
+<% if flash[:notice_human2unix] %>
+	      <div id="status"><%= flash[:notice_layout] %></div>
+	<% elsif flash[:error_human2unix] %>
+	      <div id="errors" style="color:red;font-size:small;text-align:center;"><%= flash[:error_layout] %></div>
+	<% end %>
+<h4>Convert from  Date and Time format to Unix Timestamp</h4>
+<% form_tag :controller=>'misc', :action=>'index', :subaction=>'human2unix' do %>
+<% if @human2unix %>
+<small><strong>Date and Time: </strong> </small> <%= text_field :misc, :currDnT2, :value=>@humanT  %> <br/>
+<small><strong>Unix Timestamp:</strong> </small><%= text_field :misc, :unixT2, :value=>@human2unix%>
+<% else %>
+<small><strong>Date and Time: </strong> </small> <%= text_field :misc, :currDnT2, :value=>Time.new.strftime("%m-%d-%Y %H:%M:%S")  %> <br/>
+<small><strong>Unix Timestamp:</strong> </small><%= text_field :misc, :unixT2 %>
+<% end %>
+<%= submit_tag "To Unix Timestamp" %>
+<% end %>
+</div>
