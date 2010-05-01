@@ -1,34 +1,34 @@
 <div class="misc_block">
 <% if flash[:notice_unix2human] %>
-	      <div id="status"><%= flash[:notice_layout] %></div>
+	      <div id="status" style="color:green;font-size:small;text-align:center;"><%= flash[:notice_unix2human] %></div>
 	<% elsif flash[:error_unix2human] %>
-	      <div id="errors" style="color:red;font-size:small;text-align:center;"><%= flash[:error_layout] %></div>
+	      <div id="errors" style="color:red;font-size:small;text-align:center;"><%= flash[:error_unix2human] %></div>
 	<% end %>
 <h4>Convert from Unix Timestamp to Date and Time format</h4>
 <% form_tag :controller=>'misc', :action=>'index', :subaction=>'unix2human' do %>
 <% if @unix2human %>
 <small><em>Unix Timestamp: </em></small> <%= text_field :misc, :unixT, :value=>@unixT %><br/>
-<small><em>Date and Time:</em></small> <%= text_field :misc, :currDnT, :value=>@unix2human %>
+<small><em>Date and Time:</em></small> <%= text_field :misc, :currDnT, :value=>@unix2human %> <b>GMT <%=@zone%> </b>
 <% else %>
 <small><em>Unix Timestamp: </em></small> <%= text_field :misc, :unixT, :value=>Time.new.to_i %><br/>
-<small><em>Date and Time:</em></small> <%= text_field :misc, :currDnT %>
+<small><em>Date and Time:</em></small> <%= text_field :misc, :currDnT %> <b>GMT</b>
 <% end %>
 <%= submit_tag "To Date and Time" %>
 <% end %>
 </div>
 <div class="misc_block">
 <% if flash[:notice_human2unix] %>
-	      <div id="status"><%= flash[:notice_layout] %></div>
+	      <div id="status" style="color:green;font-size:small;text-align:center;"><%= flash[:notice_human2unix] %></div>
 	<% elsif flash[:error_human2unix] %>
-	      <div id="errors" style="color:red;font-size:small;text-align:center;"><%= flash[:error_layout] %></div>
+	      <div id="errors" style="color:red;font-size:small;text-align:center;"><%= flash[:error_human2unix] %></div>
 	<% end %>
 <h4>Convert from  Date and Time format to Unix Timestamp</h4>
 <% form_tag :controller=>'misc', :action=>'index', :subaction=>'human2unix' do %>
 <% if @human2unix %>
-<small><em>Date and Time: </em> </small> <%= text_field :misc, :currDnT2, :value=>@humanT  %> <br/>
+<small><em>Date and Time: </em> </small> <%= text_field :misc, :currDnT2, :value=>@humanT  %> <b>GMT </b><br/>
 <small><em>Unix Timestamp:</em> </small><%= text_field :misc, :unixT2, :value=>@human2unix%>
 <% else %>
-<small><em>Date and Time: </em> </small> <%= text_field :misc, :currDnT2, :value=>Time.new.strftime("%m-%d-%Y %H:%M:%S")  %> <br/>
+<small><em>Date and Time: </em> </small> <%= text_field :misc, :currDnT2, :value=>Time.new.strftime("%m-%d-%Y %H:%M:%S")  %><b>GMT</b> <br/>
 <small><em>Unix Timestamp:</em> </small><%= text_field :misc, :unixT2 %>
 <% end %>
 <%= submit_tag "To Unix Timestamp" %>
