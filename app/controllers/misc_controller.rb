@@ -9,7 +9,7 @@ when :post
 	@zone=t.to_s.split(" ")[4]
 	@unix2human = Time.at(params[:misc][:unixT].to_i).strftime("%m-%d-%Y %H:%M:%S")
 	@unixT = params[:misc][:unixT]
-	flash[:notice_unix2human] = "Unix epoch time <b>#{@unixT} = #{@unix2human} GMT #{@zone} </b>"
+	#flash[:notice_unix2human] = "Unix epoch time <b>#{@unixT} = #{@unix2human} GMT #{@zone} </b>"
 	when "human2unix"
 	puts "Inside timestamp...human2unix"
 	ts=params[:misc][:currDnT2]

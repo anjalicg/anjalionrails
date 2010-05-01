@@ -8,7 +8,8 @@
 <% form_tag :controller=>'misc', :action=>'index', :subaction=>'unix2human' do %>
 <% if @unix2human %>
 <small><em>Unix Timestamp: </em></small> <%= text_field :misc, :unixT, :value=>@unixT %><br/>
-<small><em>Date and Time:</em></small> <%= text_field :misc, :currDnT, :value=>@unix2human %> <b>GMT <%=@zone%> </b>
+<small><em>Date and Time:</em></small> <%= text_field :misc, :currDnT, :value=>@unix2human %> <b>GMT <%=@zone%> </b><br/>
+<p style="font-size:small;text-align:center;">Unix epoch time <b><%= @unixT %>= <%=@unix2human%> GMT <%=@zone%> </b><br/></p>
 <% else %>
 <small><em>Unix Timestamp: </em></small> <%= text_field :misc, :unixT, :value=>Time.new.to_i %><br/>
 <small><em>Date and Time:</em></small> <%= text_field :misc, :currDnT %> <b>GMT</b>
@@ -27,6 +28,7 @@
 <% if @human2unix %>
 <small><em>Date and Time: </em> </small> <%= text_field :misc, :currDnT2, :value=>@humanT  %> <b>GMT </b><br/>
 <small><em>Unix Timestamp:</em> </small><%= text_field :misc, :unixT2, :value=>@human2unix%>
+<p style="font-size:small;text-align:center;"> Time <b><%= @humanT %> GMT = <%=@human2unix%> </b> unix timestamp since epoch<br/></p>
 <% else %>
 <small><em>Date and Time: </em> </small> <%= text_field :misc, :currDnT2, :value=>Time.new.strftime("%m-%d-%Y %H:%M:%S")  %><b>GMT</b> <br/>
 <small><em>Unix Timestamp:</em> </small><%= text_field :misc, :unixT2 %>
