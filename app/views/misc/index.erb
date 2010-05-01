@@ -1,4 +1,10 @@
 <div class="misc_block">
+<% x= Date.today.yday %>
+<% y= Date.today.year %>
+<% r= Date.civil(y,12,31) %>
+<p style="font-family:sans-serif;font-size:small;"><em>Today is <b><%= x%><sup><%= xth(x)%></sup></b> day of this year. There are <b> <%= r.yday-x %> </b>days remaining till the end of the year.</em></p>
+</div>
+<div class="misc_block">
 <% if flash[:notice_unix2human] %>
 	      <div id="status" style="color:green;font-size:small;text-align:center;"><%= flash[:notice_unix2human] %></div>
 	<% elsif flash[:error_unix2human] %>
