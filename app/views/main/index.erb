@@ -10,7 +10,11 @@
 <tr>
 <td><strong>Visitor Statistics</strong></td>
 <td>
-You are our <%= @count%><sup><%=xth(@count) %></sup> overall visitor, <%= @count_place%><sup><%=xth(@count_place) %></sup> from <%= @visit_details["Your Place"].split(",")[0]%>, and <%= @count_today%><sup><%=xth(@count_today) %></sup> today.
+You are our <%= @count%><sup><%=xth(@count) %></sup> overall visitor, 
+<% unless @visit_details["Your Place"].split(",")[0] == "(Unknown City?)" %>
+<%= @count_place%><sup><%=xth(@count_place) %></sup> from <%= @visit_details["Your Place"].split(",")[0]%>, 
+<% end %>
+and <%= @count_today%><sup><%=xth(@count_today) %></sup> today.
 </td>
 </tr>
 <% if @weather  != nil %>
