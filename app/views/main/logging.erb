@@ -1,0 +1,14 @@
+<div style="width:50%;">
+<h4>Printing the contents of <em>"<%= @filename %>" </em> </h4>
+<div>
+<% @fLog.reverse.each do |line| %>
+<% if h(line).eql? "\n" %>
+<%= h line %> 
+<p>-------------------------------------------------------------</p>
+<% else %>
+<%= h line %>
+<p>-------------------------------------------------------------</p>
+<% end %>
+<% end %>
+</div>
+</div>
