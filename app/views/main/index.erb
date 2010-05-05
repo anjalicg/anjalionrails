@@ -1,3 +1,4 @@
+<% unless @exception_happened %>
 <h4>Visitor Details:-</h4>
 <table border="1" cellspacing=1>
 <% @visit_details.each do |key, value| %>
@@ -35,4 +36,7 @@ You are our <%= @count%><sup><%=xth(@count) %></sup> overall visitor, <%= @count
 <small><a href="http://www.merriam-webster.com/cgi-bin/mwwod.pl" target="_blank" >Click here to visit merriam-webster for more details </a></small><br/>
 <small>This information has been scraped from <strong><a href="http://www.merriam-webster.com/" target="_blank">merriam-webster</a></strong></small>
 </div>
+<% end %>
+<% else %>
+<%= @exception_happened %>
 <% end %>

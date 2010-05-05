@@ -3,6 +3,7 @@ before_filter :logged_in?, :only=>'admin'
 require 'rexml/document'
 include REXML
 def index
+begin
 	@quotation=Quotation.new
 	q=Quotation.find(:all)
 	l=rand(q.length)
@@ -51,6 +52,9 @@ def index
 	rescue Exception => err
 	puts "Error happened in getting the weather information for place ->#{session['Your Place'].split(',')[0]}<-!! \n <----------------Weather Exception Start \n #{err} \n Weather Exception End---------------->"
 	end
+rescue Exception=>@exception_happened
+
+end
 
 end
 
