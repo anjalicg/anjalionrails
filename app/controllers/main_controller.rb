@@ -39,11 +39,14 @@ begin
 	@visit_details["Your Browser"]= session["Your Browser"]
 	@visit_details["Your IP"]= session["Your IP"]
 	@visit_details["Supported Charset"]= session["Supported Charset"]
-	#@count = Visitor.find(:all).count
+	@count = Visitor.find(:all).length
+#puts "#########################******************************###########################"
+#	puts Visitor.find(:all).class
+#puts "#########################******************************###########################"
 	time_now = Time.new
-	#@count_today =Visitor.find(:all, :conditions=>{:vdate=>Date.civil(time_now.year, time_now.month, (time_now-time_now.gmt_offset).day)}).count
+	@count_today =Visitor.find(:all, :conditions=>{:vdate=>Date.civil(time_now.year, time_now.month, (time_now-time_now.gmt_offset).day)}).length
 	city_country=@visit_details["Your Place"].split(",")
-	#@count_place = Visitor.find(:all, :conditions=>{:city=>city_country[0]}).count
+	@count_place = Visitor.find(:all, :conditions=>{:city=>city_country[0]}).length
 	#puts ".........#{@count} #{@count_today} #{@count_place}........................"
 	@word_of_day = scrap_word()
 	begin
