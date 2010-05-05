@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100408193203) do
+ActiveRecord::Schema.define(:version => 20100504191657) do
 
   create_table "hangmen", :force => true do |t|
     t.string "word"
@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(:version => 20100408193203) do
     t.text     "quote",      :null => false
     t.string   "author"
     t.datetime "created_at"
+  end
+
+  create_table "visitors", :force => true do |t|
+    t.string   "city"
+    t.string   "country"
+    t.string   "ip"
+    t.datetime "vtime"
+    t.date     "vdate"
   end
 
   create_table "vocabs", :force => true do |t|
