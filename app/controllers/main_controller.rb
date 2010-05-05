@@ -2,6 +2,9 @@ class MainController < ApplicationController
 before_filter :logged_in?, :only=>'admin'
 require 'rexml/document'
 include REXML
+def logging
+end
+
 def index
 begin
 	@quotation=Quotation.new
