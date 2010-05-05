@@ -23,9 +23,10 @@ begin
 		end
 		@visitor.ip= request.env["REMOTE_ADDR"]
 		time_now = Time.new
-		puts "#########################******************************###########################"
-		puts "................................#{time_now}, #{time_now.zone} #{time_now.year}, #{time_now.month}, #{time_now.day}, #{(time_now-time_now.gmt_offset).day}..........................."
-		puts "#########################******************************###########################"
+	#	puts "#########################******************************###########################"
+	#	puts "................................#{time_now}, #{time_now.zone} #{time_now.year}, #{time_now.month}, #{time_now.day},
+	#{(time_now-			time_now.gmt_offset).day}..........................."
+		#puts "#########################******************************###########################"
 		@visitor.vtime=time_now
 		@visitor.vdate=Date.civil(time_now.year, time_now.month, (time_now-time_now.gmt_offset).day)
 		@visitor.save
@@ -38,19 +39,19 @@ begin
 	@visit_details["Your Browser"]= session["Your Browser"]
 	@visit_details["Your IP"]= session["Your IP"]
 	@visit_details["Supported Charset"]= session["Supported Charset"]
-	@count = Visitor.find(:all).count
+	#@count = Visitor.find(:all).count
 	time_now = Time.new
-	@count_today =Visitor.find(:all, :conditions=>{:vdate=>Date.civil(time_now.year, time_now.month, (time_now-time_now.gmt_offset).day)}).count
+	#@count_today =Visitor.find(:all, :conditions=>{:vdate=>Date.civil(time_now.year, time_now.month, (time_now-time_now.gmt_offset).day)}).count
 	city_country=@visit_details["Your Place"].split(",")
-	@count_place = Visitor.find(:all, :conditions=>{:city=>city_country[0]}).count
-	puts ".........#{@count} #{@count_today} #{@count_place}........................"
+	#@count_place = Visitor.find(:all, :conditions=>{:city=>city_country[0]}).count
+	#puts ".........#{@count} #{@count_today} #{@count_place}........................"
 	@word_of_day = scrap_word()
 	begin
 	@weather = get_weather(session["Your Place"].split(",")[0])
-	puts "Weather info obtained......... #{@weather}"
+	#puts "Weather info obtained......... #{@weather}"
 	#@weather = get_weather("moscow")
 	rescue Exception => err
-	puts "Error happened in getting the weather information for place ->#{session['Your Place'].split(',')[0]}<-!! \n <----------------Weather Exception Start \n #{err} \n Weather Exception End---------------->"
+	#puts "Error happened in getting the weather information for place ->#{session['Your Place'].split(',')[0]}<-!! \n <----------------Weather Exception Start # 		#\n #{err} \n Weather Exception End---------------->"
 	end
 rescue Exception=>@exception_happened
 

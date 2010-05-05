@@ -7,12 +7,14 @@
 <td><%= value %></td>
 </tr>
 <% end %>
+<% if @count %>
 <tr>
 <td><strong>Visitor Statistics</strong></td>
 <td>
 You are our <%= @count%><sup><%=xth(@count) %></sup> overall visitor, <%= @count_place%><sup><%=xth(@count_place) %></sup> from <%= @visit_details["Your Place"].split(",")[0]%>, and <%= @count_today%><sup><%=xth(@count_today) %></sup> today.
 </td>
 </tr>
+<% end %>
 <% if @weather  != nil %>
 <tr><td><strong>Weather Forecast:</strong></td>
 <td><%= render :partial => "main/weather", :object => @weather %></td>
