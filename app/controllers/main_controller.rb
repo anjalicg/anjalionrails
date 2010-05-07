@@ -70,7 +70,7 @@ render :controller=>'main', :action=>'admin'
 end
 case request.method
 when :post
-if params[:login][:user]=="anjaliIsDAdmin.com" and params[:login][:password] == "A1!A1!B2@C3#E5%H8*MU"
+if params[:login][:user]=="anjaliIsDAdmin.com" and params[:login][:password] == "A1!A1!B2@C3#E5%H8*MU-A@A1"
 session[:user]="admin"
 redirect_to :controller=>"main", :action=>"admin"
 end
